@@ -10,6 +10,8 @@ unicodeToLatex (Math t e) = Math t (concatMap sym e)
 unicodeToLatex x          = x
 
 sym :: Char -> String
+sym '⟨' = "\\langle"
+sym '⟩' = "\\rangle"
 sym '¬' = "\\neg"
 sym '±' = "\\pm"
 sym '×' = "\\times"
